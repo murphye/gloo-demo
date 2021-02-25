@@ -1,7 +1,7 @@
 apiVersion: devportal.solo.io/v1alpha1
 kind: APIDoc
 metadata:
-  name: todo-schema
+  name: todo-1-schema
   namespace: todo
 spec:
   openApi:
