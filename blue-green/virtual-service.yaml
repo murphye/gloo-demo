@@ -1,0 +1,21 @@
+apiVersion: gateway.solo.io/v1
+kind: VirtualService
+metadata:
+  name: default
+  namespace: gloo-system
+spec:
+  virtualHost:
+    domains:
+    - todo-api.mattel-east.gsolo.net
+    - todo-api.mattel-west.gsolo.net
+    routes:
+    - matchers:
+      - prefix: /todo/latest
+      routeAction:
+        single:
+          upstream:
+            name: todo-service-group
+            namespace: todo
+
+
+# TODO Add routes to the web interface for both v1 and v2 and blue/green???

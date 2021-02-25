@@ -9,36 +9,6 @@ data:
   POSTGRES_USER: todo
   POSTGRES_PASSWORD: todo
 ---
-kind: PersistentVolume
-apiVersion: v1
-metadata:
-  name: postgres-pv-volume
-  labels:
-    type: local
-    app: postgres
-spec:
-  capacity:
-    storage: 5Gi
-  storageClassName: standard
-  accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: "/mnt/data"
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: postgres-pv-claim
-  labels:
-    app: postgres
-spec:
-  storageClassName: standard
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -62,13 +32,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: postgres-config
-          volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgresdb
-      volumes:
-        - name: postgresdb
-          persistentVolumeClaim:
-            claimName: postgres-pv-claim
 ---
 apiVersion: v1
 kind: Service
@@ -79,6 +42,6 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-   - port: 5432
+    - port: 5432
   selector:
-   app: postgres
+    app: postgres

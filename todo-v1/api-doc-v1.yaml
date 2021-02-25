@@ -1,0 +1,9 @@
+apiVersion: devportal.solo.io/v1alpha1
+kind: APIDoc
+metadata:
+  name: todo-schema
+  namespace: todo
+spec:
+  openApi:
+    content:
+      fetchUrl: http://todo-v1.todo:8080/openapi

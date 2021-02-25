@@ -1,0 +1,25 @@
+apiVersion: devportal.solo.io/v1alpha1
+kind: Portal
+metadata:
+  name: todo-portal
+  namespace: todo
+spec:
+  displayName: Todo Portal
+  description: The Portal for the Todo API
+  banner:
+    fetchUrl: 
+  favicon:
+    fetchUrl: 
+  primaryLogo:
+    fetchUrl: 
+  customStyling: {}
+  staticPages: []
+
+  domains:
+  - todo-portal.mattel-east.gsolo.net
+  - todo-portal.mattel-west.gsolo.net
+
+  # This will include all API product of the environment in the portal
+  publishedEnvironments:
+  - name: todo
+    namespace: todo

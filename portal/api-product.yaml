@@ -1,0 +1,52 @@
+apiVersion: devportal.solo.io/v1alpha1
+kind: APIProduct
+metadata:
+  name: todo-product
+  namespace: todo
+
+spec:
+  displayInfo: 
+    description: Todo Product
+    title: Todo Product
+    
+  versions:
+  - name: v1
+    apis:
+    - apiDoc:
+        name: todo-schema
+        namespace: todo
+    defaultRoute:
+      inlineRoute:
+        backends:
+        - kube:
+            name: todo-v1
+            namespace: todo
+            port: 8080
+    tags:
+      stable: {}
+  - name: v2
+    apis:
+    - apiDoc:
+        name: todo-schema
+        namespace: todo
+    defaultRoute:
+      inlineRoute:
+        backends:
+        - kube:
+            name: todo-v2
+            namespace: todo
+            port: 8080
+    tags:
+      stable: {}
+
+  # plans:
+  # - name: basic
+  #   authPolicy: APIKey
+  #   rateLimitPolicy:
+  #     unit: MINUTE
+  #     requestsPerUnit: 10
+  # - name: premium
+  #   authPolicy: APIKey
+  #   rateLimitPolicy:
+  #     unit: MINUTE
+  #     requestsPerUnit: 600

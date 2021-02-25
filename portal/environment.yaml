@@ -1,0 +1,18 @@
+apiVersion: devportal.solo.io/v1alpha1
+kind: Environment
+metadata:
+  name: todo
+  namespace: todo
+spec:
+  domains:
+  - todo-api.mattel-east.gsolo.net
+  - todo-api.mattel-west.gsolo.net
+  displayInfo:
+    description: This environment is meant for developers to deploy and test their APIs.
+    displayName: Todo
+  apiProducts:
+  - name: todo-product
+    namespace: todo
+    publishedVersions:
+    - name: v1
+    - name: v2
