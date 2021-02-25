@@ -1,7 +1,7 @@
 apiVersion: gateway.solo.io/v1
 kind: VirtualService
 metadata:
-  name: default
+  name: todo-bg
   namespace: gloo-system
 spec:
   virtualHost:
@@ -14,7 +14,4 @@ spec:
         single:
           upstream:
             name: todo-service-group
-            namespace: todo
-
-
-# TODO Add routes to the web interface for both v1 and v2 and blue/green???
+            namespace: gloo-system
