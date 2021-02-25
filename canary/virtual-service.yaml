@@ -9,20 +9,20 @@ spec:
     - todo.mattel-west.gsolo.net
     routes:
     - matchers:
-      - prefix: /
-      routeAction:
-        upstreamGroup:
-          name: todo-service-group
-          namespace: gloo-system
-      - prefix: /todo/v1
+      - prefix: /v1
       routeAction:
         single:
           upstream:
             name: todo-todo-v1-8080
             namespace: gloo-system
-      - prefix: /todo/v2
+      - prefix: /v2
       routeAction:
         single:
           upstream:
             name: todo-todo-v2-8080
             namespace: gloo-system
+      - prefix: /
+      routeAction:
+        upstreamGroup:
+          name: todo-service-group
+          namespace: gloo-system
