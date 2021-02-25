@@ -9,9 +9,9 @@ spec:
   banner:
     fetchUrl: https://i.imgur.com/EXbBN1a.jpg
   favicon:
-    fetchUrl: https://i.imgur.com/QQwlQG3.png
+    fetchUrl: https://www.forbes.com/wheels/wp-content/uploads/2020/11/Hot-Wheels-featured2.jpg
   primaryLogo:
-    fetchUrl: https://i.imgur.com/hjgPMNP.png
+    fetchUrl: https://i.pinimg.com/originals/4f/e5/ac/4fe5ace3740cb3725e86c2880594dae5.jpg
   customStyling: {}
   staticPages: []
 
