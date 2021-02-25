@@ -7,11 +7,11 @@ spec:
   displayName: Todo Portal
   description: The Portal for the Todo API
   banner:
-    fetchUrl: 
+    fetchUrl: https://i.imgur.com/EXbBN1a.jpg
   favicon:
-    fetchUrl: 
+    fetchUrl: https://i.imgur.com/QQwlQG3.png
   primaryLogo:
-    fetchUrl: 
+    fetchUrl: https://i.imgur.com/hjgPMNP.png
   customStyling: {}
   staticPages: []
 
