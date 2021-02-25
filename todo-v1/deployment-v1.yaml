@@ -19,8 +19,8 @@ spec:
         prometheus.io/scrape: "true"
         prometheus.io/path: /actuator/prometheus
       labels:
-        app.kubernetes.io/name: todo-spring-quarkus
-        app.kubernetes.io/version: 0.0.1-SNAPSHOT
+        app.kubernetes.io/name: todo-v1
+        app.kubernetes.io/version: v1
     spec:
       containers:
       - env:
