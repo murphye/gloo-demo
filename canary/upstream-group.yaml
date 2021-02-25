@@ -9,9 +9,9 @@ spec:
       upstream:
         name: todo-todo-service-v1-8080
         namespace: todo
-    weight: 5
+    weight: 8
   - destination:
       upstream:
         name: todo-todo-service-v2-8080
         namespace: todo
-    weight: 5
+    weight: 2

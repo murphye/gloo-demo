@@ -12,6 +12,6 @@ spec:
       - prefix: /
       routeAction:
         single:
-          upstream:
+          upstreamGroup:
             name: todo-service-group
             namespace: gloo-system
