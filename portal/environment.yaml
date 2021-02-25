@@ -5,7 +5,6 @@ metadata:
   namespace: todo
 spec:
   domains:
-  - todo-api.mattel-east.gsolo.net
   - todo-api.mattel-west.gsolo.net
   displayInfo:
     description: This environment is meant for developers to deploy and test their APIs.
