@@ -7,11 +7,11 @@ spec:
   displayName: Todo Portal
   description: The Portal for the Todo API
   banner:
-    fetchUrl: https://i.imgur.com/EXbBN1a.jpg
+    fetchUrl: https://www.annualreports.com/HostedData/CompanyHeader/NASDAQ_MAT.jpg
   favicon:
-    fetchUrl: https://www.forbes.com/wheels/wp-content/uploads/2020/11/Hot-Wheels-featured2.jpg
+    fetchUrl: https://www.mattel.com/content/dam/corp-site/logos-and-icons/favicon/Mattel_logo_favicon.png
   primaryLogo:
-    fetchUrl: https://i.pinimg.com/originals/4f/e5/ac/4fe5ace3740cb3725e86c2880594dae5.jpg
+    fetchUrl: https://www.mattel.com/content/dam/corp-site/logos-and-icons/Mattel-Logo-Nav_Desktop_Shadow.png
   customStyling: {}
   staticPages: []
 
