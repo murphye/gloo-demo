@@ -1,4 +1,4 @@
-# Advancecd Gloo Demo
+# Advanced Gloo Demo
 
 This demo script assumes the following are already set up. Specific installation instructions are documentated separately. This repository focuses on the demo script itself.
 
@@ -16,9 +16,8 @@ This demo script assumes the following are already set up. Specific installation
 
 * There is an OpenAPI spec that is deployed with the application at the `/openapi` endpoint.
 * The hosted UI for the application should have free access to the API endpoints.
-* External consumers of the application should only have access with an API key, via a Gloo API Product.
 
 ### Scenario Part 2
 
-* 
+* There is a v1 and a v2 of the Todo application. The v2 version has a new feature to remove a Todo, and the API spec is different.
 
