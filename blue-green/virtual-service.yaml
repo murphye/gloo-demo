@@ -6,11 +6,10 @@ metadata:
 spec:
   virtualHost:
     domains:
-    - todo-api.mattel-east.gsolo.net
-    - todo-api.mattel-west.gsolo.net
+    - todo.mattel-west.gsolo.net
     routes:
     - matchers:
-      - prefix: /todo/latest
+      - prefix: /
       routeAction:
         single:
           upstream:
