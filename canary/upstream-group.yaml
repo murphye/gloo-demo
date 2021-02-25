@@ -7,11 +7,11 @@ spec:
   destinations:
   - destination:
       upstream:
-        name: todo-todo-service-v1-8080
+        name: todo-todo-v1-8080
         namespace: todo
     weight: 8
   - destination:
       upstream:
-        name: todo-todo-service-v2-8080
+        name: todo-todo-v2-8080
         namespace: todo
     weight: 2
