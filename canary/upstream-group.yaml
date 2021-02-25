@@ -2,16 +2,16 @@ apiVersion: gloo.solo.io/v1
 kind: UpstreamGroup
 metadata:
   name: todo-service-group
-  namespace: todo
+  namespace: gloo-system
 spec:
   destinations:
   - destination:
       upstream:
         name: todo-todo-v1-8080
-        namespace: todo
+        namespace: gloo-system
     weight: 8
   - destination:
       upstream:
         name: todo-todo-v2-8080
-        namespace: todo
+        namespace: gloo-system
     weight: 2
