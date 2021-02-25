@@ -9,9 +9,9 @@ spec:
       upstream:
         name: todo-todo-v1-8080
         namespace: gloo-system
-    weight: 8
+    weight: 2
   - destination:
       upstream:
         name: todo-todo-v2-8080
         namespace: gloo-system
-    weight: 2
+    weight: 8
