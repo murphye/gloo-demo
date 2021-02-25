@@ -2,7 +2,7 @@ apiVersion: gateway.solo.io/v1
 kind: VirtualService
 metadata:
   name: todo-prod
-  namespace: gloo-system
+  namespace: todo
 spec:
   virtualHost:
     domains:
