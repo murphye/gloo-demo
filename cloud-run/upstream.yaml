@@ -1,0 +1,12 @@
+apiVersion: gateway.solo.io/v1
+kind: Upstream
+metadata:
+  name: hello-00001-mad-tls
+  namespace: gloo-system
+static:
+  hosts:
+  - addr: hello-omfvy4ushq-wn.a.run.app
+    port: 443
+status:
+  reportedBy: gloo
+  state: Accepted

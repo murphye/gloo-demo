@@ -1,0 +1,39 @@
+
+apiVersion: gloo.solo.io/v1
+kind: Upstream
+metadata:
+  name: wcs-store-address
+  namespace: gloo-system
+spec:
+  static:
+#    useTls: true
+    hosts:
+    - addr: 35.223.143.109
+      port: 8080
+#  sslConfig:
+#    sni: mqa.services.commerce.mattel.com
+#  useHttp2: false
+#  useTls: true
+---
+apiVersion: gateway.solo.io/v1
+kind: VirtualService
+metadata:
+  name: default
+  namespace: gloo-system
+spec:
+  virtualHost:
+    domains:
+    - '*'
+    routes:
+    - matchers:
+      - prefix: /
+      routeAction:
+        single:
+          upstream:
+            name: wcs-store-address
+            namespace: gloo-system
+#      options:
+#        autoHostRewrite: true
+
+
+        

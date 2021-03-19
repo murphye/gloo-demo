@@ -1,0 +1,33 @@
+# This is a sample of what is currently deployed in the demo system.
+
+apiVersion: gateway.solo.io/v1
+kind: VirtualService
+metadata:
+  annotations:
+  name: mattel-west
+  namespace: gloo-system
+spec:
+  virtualHost:
+    domains:
+    - mattel-west.gsolo.net
+    routes:
+    - matchers:
+      - prefix: /guestbook
+      options:
+        prefixRewrite:
+          value: /
+      routeAction:
+        single:
+          upstream:
+            name: default-guestbook-ui-80
+            namespace: gloo-system
+    - matchers:
+      - prefix: /run
+      options:
+        autoHostRewrite:
+          value: true
+      routeAction:
+        single:
+          upstream:
+            name: hello-00001-mad-tls
+            namespace: gloo-system
